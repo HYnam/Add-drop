@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/timetabling.css">
+		<title>swap class</title>
+	</head>
+	
+	<body>
+		<div id="main">
+			<div id="header">
+				<div id="widgetBar">
+					<div class="logo">
+						<img align="left" src="logo.jpg" alt="logo" width="300" height="100">
+						<div class="button">
+							<script language="javascript">
+								function logout() {
+									alert('Do you want to logout?');
+								}
+							</script>
+							<button class="btn login" onclick="logout()">Logout</button>
+						</div>
+
+				<h1>Swapping Platform</h1>
+				<label for="st_name"><b>Student Name :</b></label><input type="text" id="st_name" name="st_name">
+				<br>
+				<label for="st_no"><b>Student Number :</b></label><input type="text" id="st_no" name="st_no">
+				<br>
+				<label for="st_pg"><b>Student Program :</b></label><input type="text" id="st_pg" name="st_pg">
+				<b>Course must attend :</b><br/>ENG<br/>CHIN<br/>MATH<br/>OOP
+				<p><b>Write down the number 1 (highest perferred) - 3 (lowest perferred)</b></p>
+				<table style="width:100%">
+					<tr>
+						<td>ENG</td> <td>Monday</td> <td>0830-1130</td> <td><input width="10px" type="int" id="eng1" name="eng1"></td>
+					</tr>
+					<tr>
+						<td></td> <td>Wednesday</td> <td>1130-1430</td> <td><input width="10px" type="int" id="eng2" name="eng2"></td>
+					</tr>
+					<tr>
+						<td></td> <td>Thursday</td> <td>1330-1630</td> <td><input width="10px" type="int" id="eng3" name="eng3"></td>
+					</tr>
+				</table>
+				<div class="button">
+					<button class="btn" id="done" onclick="done()">Done</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
