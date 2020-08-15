@@ -4,6 +4,49 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="css/timetabling.css">
 		<title>swap class</title>
+		<style>
+			table, th, td{
+				border-width:1px solid black;
+				border-collapse: collapse;
+			}
+            /*
+            .popup {
+            display: none; /* Hidden by default */  /*
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* Enable scroll */ /*
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            }
+
+            .popup-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            }
+
+            .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+            }
+            */
+		</style>
 	</head>
 	
 	<body>
@@ -12,24 +55,26 @@
 				<div id="widgetBar">
 					<div class="logo">
 						<img align="left" src="logo.jpg" alt="logo" width="300" height="100">
-						<div class="button">
-							<script language="javascript">
-								function logout() {
-									alert('Do you want to logout?');
-								}
-							</script>
-							<button class="btn login" onclick="logout()">Logout</button>
-						</div>
-
+					</div>
+					<div class="button">
+						<button class="btn login" id="logout" onclick="javascript:location.href='index.html'">Logout</button>
+						<!--<script src="logout.js"></script>-->
+					</div>
+                    <div class="button">
+						<button class="btn login" id="aboutUs" onclick="javascript:location.href='aboutUs.html'">About us</button>
+					</div>
+                    <div class="button">
+						<button class="btn login" id="My Timetable" onclick="javascript:location.href='myTimetable.html'">My timetable</button>
+					</div>
+				</div>
+				
 				<h1>Swapping Platform</h1>
 				<label for="st_name"><b>Student Name :</b></label><input type="text" id="st_name" name="st_name">
-				<br>
 				<label for="st_no"><b>Student Number :</b></label><input type="text" id="st_no" name="st_no">
-				<br>
 				<label for="st_pg"><b>Student Program :</b></label><input type="text" id="st_pg" name="st_pg">
 				<b>Course must attend :</b><br/>ENG<br/>CHIN<br/>MATH<br/>OOP
 				<p><b>Write down the number 1 (highest perferred) - 3 (lowest perferred)</b></p>
-				<table style="width:100%">
+				<table align="center" style="width:80%">
 					<tr>
 						<td>ENG</td> <td>Monday</td> <td>0830-1130</td> <td><input width="10px" type="int" id="eng1" name="eng1"></td>
 					</tr>
@@ -40,10 +85,58 @@
 						<td></td> <td>Thursday</td> <td>1330-1630</td> <td><input width="10px" type="int" id="eng3" name="eng3"></td>
 					</tr>
 				</table>
-				<div class="button">
-					<button class="btn" id="done" onclick="done()">Done</button>
+                <form action="myTimetable.html">
+                    <input type="submit" value="submit">
+                </form>
+                <div id="footer">
+					<hr>
+					<p id="footerText">Group 18 The time tabling system</p>
 				</div>
 			</div>
 		</div>
+        <!--
+            <p align="right"><button onclick="submit()">submit</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button onclick="restart()">cancel</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        -->
+        <!---Popup window--->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <p>Submit Successful!</p>
+            </div>
+        </div>
+    <script>
+    /*---submit(){
+        if(document.getElementById("st_name").value =="" || document.getElementById("st_no").value == "" || document.getElementById("st_pg").value == ""
+        || document.getElementById("eng1").value == "" || document.getElementById("eng2").value == "" || document.getElementById("eng3").value == ""){
+            alert("You didn't finish the swapping!");
+            return false;
+        }else if(document.getElementById("eng1").value >3 || document.getElementById("eng2").value >3 || document.getElementById("eng3").value >3){
+            alert("You input invaild input!");
+            return false;
+        }else if(document.getElementById("eng1").value == document.getElementById("eng2").value || document.getElementById("eng1").value == document.getElementById("eng3").value
+        || document.getElementById("eng2").value == document.getElementById("eng3").value){
+            alert("You input same input!");
+            return false;
+        }else{
+            var popup = document.getElementById("popup");
+            var btn = document.getElementById("myBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function() {
+                popup.style.display = "block";
+            }
+            span.onclick = function() {
+                popup.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == popup) {
+                    popup.style.display = "none";
+                }
+            }
+            return true;
+        }
+    }---*/
+    </script>
 	</body>
 </html>
