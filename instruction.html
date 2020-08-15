@@ -1,17 +1,31 @@
-<//
-	Document   : instruction
-	Created on : Mar 15, 2020, 11:14:23 AM
-	Author     : HYAT
-//>
-
 <!DOCTYPE html>
 <html>
+    <style>
+#button {
+    width: 6em;
+    border: 2px solid green;
+    background: #ffe;
+    border-radius: 5px;
+}
+a {
+    display: block;
+    width: 100%;
+    line-height: 2em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+a:hover {
+    color: red;
+    background: #eff;
+}
+</style>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="css/timetabling.css">
 		<title>instruction</title>
 	</head>
-	
+
 	<body>
 		<div id="main">
 			<div id="header">
@@ -20,8 +34,17 @@
 						<img align="left" src="logo.jpg" alt="logo" width="300" height="100">
 					</div>
 					<div class="button">
-						<button class="btn login" id="logout" onclick="want_logout()">Logout</button>
-						<script src="logout.js"></script>   
+						<button class="btn login" id="logout" onclick="javascript:location.href='index.html'">Logout</button>
+						<!--<script src="logout.js"></script>-->
+					</div>
+					<div class="button">
+						<button class="btn login" id="aboutUs" onclick="javascript:location.href='aboutUs.html'">About us</button>
+					</div>
+                    <div class="button">
+						<button class="btn login" id="My Timetable" onclick="javascript:location.href='myTimetable.html'">My timetable</button>
+					</div>
+                    <div class="button">
+						<button class="btn login" id="instruction" onclick="javascript:location.href='instruction.html'">Swap class</button>
 					</div>
 				</div>
 				<h1>Instruction:
@@ -31,8 +54,10 @@
 				<b>The master time table:</b>
 				<p>View all the schedule of courses you need to study, choose your most desire timeslot</p>
 				<p><iframe src="https://drive.google.com/file/d/17C1eVybCFAjkk22C7AXI_1ftJe00HuLO/preview" width="640" height="480"></iframe></p>
-				
-				<div id="footer">
+                <form action="swap.html">
+                    <input type="submit" value="continue">
+                </form>
+                <div id="footer">
 					<hr>
 					<p id="footerText">Group 18 The time tabling system</p>
 				</div>
