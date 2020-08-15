@@ -1,7 +1,7 @@
 # Add-drop
 Aim: A platform for student to perform add-drop classes to build their most desire timetable
-This is a group project, with 4 members
-Associate Degree of Engineering, computer science year 2. Final year project
+- This is a group project, with 4 members
+- Associate Degree of Engineering, computer science year 2. Final year project
 
 - Open index.html to run the program
 - Popup login page for student to login
